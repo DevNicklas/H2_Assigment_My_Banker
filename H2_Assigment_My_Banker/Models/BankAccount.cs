@@ -25,9 +25,6 @@ namespace H2_Assigment_My_Banker.Models
 
 		public string AccountNumber { get { return _accountNumber; } }
 
-
-
-
 		private string GetNewAccountNumber()
 		{
             RandomGenerator randomGenerator = new RandomGenerator();
