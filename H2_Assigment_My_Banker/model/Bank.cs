@@ -15,12 +15,6 @@ namespace H2_Assigment_My_Banker.Model
 			_bankName = bankName;
 		}
 
-		public string BankName 
-		{
-			get 
-			{ 
-				return _bankName; 
-			} 
-		}
+		public string BankName  { get  {  return _bankName;  }  }
 	}
 }

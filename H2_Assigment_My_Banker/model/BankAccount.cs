@@ -18,19 +18,9 @@ namespace H2_Assigment_My_Banker.Model
 			_saldo = saldo;
 			_accountNumber = accountNumber;
 		}
-		public decimal Saldo
-		{
-			get
-			{
-				return _saldo;
-			}
-		}
-		public string AccountNumber
-		{
-			get
-			{
-				return _accountNumber;
-			}
-		}
+
+		public decimal Saldo { get { return _saldo; } }
+
+		public string AccountNumber { get { return _accountNumber; } }
 	}
 }

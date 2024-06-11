@@ -18,7 +18,7 @@ namespace H2_Assigment_My_Banker.Model
 		private int _ageRestriction;
 
 
-		public Card(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, string accountNumber, decimal withdrawalLimit, decimal creditLimit)
+		public Card(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, string accountNumber, decimal withdrawalLimit, decimal creditLimit, int ageRestriction)
 		{
 			_account = account;
 			_cardHolderName = cardHolderName;
@@ -27,92 +27,23 @@ namespace H2_Assigment_My_Banker.Model
 			_accountNumber = accountNumber;
 			_withdrawalLimit = withdrawalLimit;
 			_creditLimit = creditLimit;
+			_ageRestriction = ageRestriction;
 		}
 
 		#region Properties
-		public BankAccount Account
-		{
-			get
-			{
-				return _account;
-			}
-			set
-			{
-				_account = value;
-			}
-		}
+		public BankAccount Account { get { return _account; } }
 
-		public string CardHolderName
-		{
-			get
-			{
-				return _cardHolderName;
-			}
-			set
-			{
-				_cardHolderName = value;
-			}
-		}
+		public string CardHolderName { get { return _cardHolderName; } }
 
-		public string CardNumber
-		{
-			get
-			{
-				return _cardNumber;
-			}
-			set
-			{
-				_cardNumber = value;
-			}
-		}
+		public string CardNumber { get { return _cardNumber; } }
 
-		public DateTime ExpirationDate
-		{
-			get
-			{
-				return _expirationDate;
-			}
-			set
-			{
-				_expirationDate = value;
-			}
-		}
+		public DateTime ExpirationDate { get { return _expirationDate; } }
 
-		public string AccountNumber
-		{
-			get
-			{
-				return _accountNumber;
-			}
-			set
-			{
-				_accountNumber = value;
-			}
-		}
+		public string AccountNumber { get { return _accountNumber; } }
 
-		public decimal WithdrawalLimit
-		{
-			get
-			{
-				return _withdrawalLimit;
-			}
-			set
-			{
-				_withdrawalLimit = value;
-			}
-		}
+		public decimal WithdrawalLimit { get { return _withdrawalLimit; } }
 
-		public decimal CreditLimit
-		{
-			get
-			{
-				return _creditLimit;
-			}
-			set
-			{
-				_creditLimit = value;
-			}
-		}
+		public decimal CreditLimit { get { return _creditLimit; } }
 		#endregion
 	}
 }

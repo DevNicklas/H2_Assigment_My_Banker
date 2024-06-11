@@ -8,7 +8,8 @@ namespace H2_Assigment_My_Banker.Model.Cards
 {
 	public class Maestro : Card
 	{
-		public readonly List<string> _prefixes = new List<string>()
+		
+		private readonly List<string> _prefixes = new List<string>()
 		{
 			"5018", "5020", "5038", "5893", "6304",
 			"6759", "6761", "6762", "6763"
@@ -18,5 +19,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
 		{
 
 		}
+
+		public List<string> Prefixes { get { return _prefixes; } }
 	}
 }
