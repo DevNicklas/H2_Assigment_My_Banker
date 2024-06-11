@@ -43,24 +43,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\RandomGenerator.cs" />
-    <Compile Include="Model\Bank.cs" />
-    <Compile Include="Model\BankAccount.cs" />
-    <Compile Include="Model\Card.cs" />
-    <Compile Include="Model\CardHolder.cs" />
-    <Compile Include="Model\Cards\Debit.cs" />
-    <Compile Include="Model\Cards\Maestro.cs" />
-    <Compile Include="Model\Cards\Mastercard.cs" />
-    <Compile Include="Model\Cards\VisaDankort.cs" />
-    <Compile Include="Model\Cards\VisaElectron.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CardController.cs" />
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Models\Cards\Card.cs" />
+    <Compile Include="Views\CardView.cs" />
+    <Compile Include="Controllers\RandomGenerator.cs" />
+    <Compile Include="Models\Bank.cs" />
+    <Compile Include="Models\BankAccount.cs" />
+    <Compile Include="Models\CardHolder.cs" />
+    <Compile Include="Models\Cards\Debit.cs" />
+    <Compile Include="Models\Cards\Maestro.cs" />
+    <Compile Include="Models\Cards\Mastercard.cs" />
+    <Compile Include="Models\Cards\VisaDankort.cs" />
+    <Compile Include="Models\Cards\VisaElectron.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

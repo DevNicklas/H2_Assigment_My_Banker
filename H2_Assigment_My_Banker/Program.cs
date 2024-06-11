@@ -1,6 +1,5 @@
-﻿using H2_Assigment_My_Banker.Controller;
-using H2_Assigment_My_Banker.Model;
-using H2_Assigment_My_Banker.Model.Cards;
+﻿using H2_Assigment_My_Banker.Controllers;
+using H2_Assigment_My_Banker.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +13,8 @@ namespace H2_Assigment_My_Banker
     {
         static void Main(string[] args)
         {
-            Bank bank = new Bank("MinBank");
-            Console.ReadLine();
+            MainController main = new MainController();
+            main.Main();
 		}
     }
 }
