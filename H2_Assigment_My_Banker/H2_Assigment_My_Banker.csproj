@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\RandomGenerator.cs" />
+    <Compile Include="Model\Bank.cs" />
+    <Compile Include="Model\BankAccount.cs" />
+    <Compile Include="Model\Card.cs" />
+    <Compile Include="Model\CardHolder.cs" />
+    <Compile Include="Model\Cards\Maestro.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -50,7 +56,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
