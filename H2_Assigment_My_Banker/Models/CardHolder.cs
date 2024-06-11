@@ -22,8 +22,12 @@ namespace H2_Assigment_My_Banker.Models
 		public string Name { get { return _name;} }
 
 		public byte Age { get { return _age; } }
-		
-		public List<Card> Cards { get { return _cards; } }
 
-	}
+        public List<Card> Cards
+        {
+            get { return _cards; }
+            set { _cards = value; }
+        }
+
+    }
 }

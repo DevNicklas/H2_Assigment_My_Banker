@@ -15,14 +15,20 @@ namespace H2_Assigment_My_Banker.Controllers
         public void Main()
         {
             Bank bank = new Bank("MinBank");
-            VisaDankort visaDankort = new VisaDankort(new BankAccount(bank, 1000.0m), "John Doe", new DateTime(2029, 12, 31), 25000.0m, 20000.0m);
-            Mastercard mastercard = new Mastercard(new BankAccount(bank, 1000.0m), "Jane Smith", new DateTime(2029, 12, 31), 5000.0m, 40000.0m);
+            string cardHolderName = "John Doe";
+
+            CardHolder cardHolder = new CardHolder(cardHolderName, 99);
+            cardHolder.Cards.Add(new VisaDankort(new BankAccount(bank, 1000.0m), cardHolderName, new DateTime(2029, 12, 31), 25000.0m, 20000.0m));
+            cardHolder.Cards.Add(new Mastercard(new BankAccount(bank, 1000.0m), cardHolderName, new DateTime(2029, 12, 31), 5000.0m, 40000.0m));
 
             CardView CV = new CardView();
 
-            CV.ShowCardDetails(visaDankort);
-            Console.WriteLine();
-            CV.ShowCardDetails(mastercard);
+            foreach (Card card in cardHolder.Cards)
+            {
+                CV.ShowCardDetails(card);
+                Console.WriteLine();
+            }
+
             Console.ReadLine();
         }
     }
