@@ -17,7 +17,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
             "51", "52", "53", "54", "55"
         };
 
-        public Mastercard(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, cardNumber, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
+        public Mastercard(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
         {
 
         }

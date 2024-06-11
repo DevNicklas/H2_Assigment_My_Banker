@@ -10,11 +10,6 @@ namespace H2_Assigment_My_Banker.Controllers
 {
     internal class CardController
     {
-        public Card CreateCard()
-        {
-            Card = new Card();
-        }
-
         public void UpdateView(Card card, CardView cardView)
         {
             cardView.ShowCardDetails(card);

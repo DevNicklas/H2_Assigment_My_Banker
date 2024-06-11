@@ -18,7 +18,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
             "2400"
         };
 
-        public Debit(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, cardNumber, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
+        public Debit(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
         {
             
         }
