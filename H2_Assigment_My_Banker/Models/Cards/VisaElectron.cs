@@ -11,6 +11,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
     internal class VisaElectron : Card
     {
         private const byte LENGTH = 16;
+        private const byte AGE_RESTRICTION = 15;
         private static readonly List<string> _prefixes = new List<string>()
         {
             "4026", "417500", "4508", "4844", "4913", "4917"

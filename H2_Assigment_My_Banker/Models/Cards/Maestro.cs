@@ -12,17 +12,16 @@ namespace H2_Assigment_My_Banker.Model.Cards
 	{
 		
 		private const byte LENGTH = 19;
-		private static readonly List<string> _prefixes = new List<string>()
+        private const byte AGE_RESTRICTION = 18;
+        private static readonly List<string> _prefixes = new List<string>()
 		{
 			"5018", "5020", "5038", "5893", "6304",
 			"6759", "6761", "6762", "6763"
 		};
 
-		public Maestro(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, string accountNumber, decimal withdrawalLimit, decimal creditLimit) :base(account, cardHolderName, cardNumber, expirationDate, accountNumber, withdrawalLimit, creditLimit)
-		{
+		public Maestro(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, cardNumber, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
+        {
 
 		}
-
-		public List<string> Prefixes { get { return _prefixes; } }
 	}
 }
