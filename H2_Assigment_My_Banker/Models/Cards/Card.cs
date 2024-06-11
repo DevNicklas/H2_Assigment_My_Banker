@@ -16,7 +16,7 @@ namespace H2_Assigment_My_Banker.Models.Cards
         private string _accountNumber;
         private decimal _withdrawalLimit;
         private decimal _creditLimit;
-        private int _ageRestriction;
+        private byte _ageRestriction;
 
 
         public Card(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit, List<string> prefixes, byte cardLength)
