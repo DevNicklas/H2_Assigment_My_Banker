@@ -1,4 +1,5 @@
-﻿using System;
+﻿using H2_Assigment_My_Banker.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace H2_Assigment_My_Banker.Models.Cards
 {
-    public class Card
+    public abstract class Card
     {
         private BankAccount _account;
         private string _cardHolderName;
@@ -18,16 +19,15 @@ namespace H2_Assigment_My_Banker.Models.Cards
         private int _ageRestriction;
 
 
-        public Card(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, string accountNumber, decimal withdrawalLimit, decimal creditLimit, int ageRestriction)
+        public Card(BankAccount account, string cardHolderName, string cardNumber, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit, List<string> prefixes, byte cardLength)
         {
             _account = account;
             _cardHolderName = cardHolderName;
-            _cardNumber = cardNumber;
+            _cardNumber = GetNewCardNumber(prefixes, cardLength);
             _expirationDate = expirationDate;
-            _accountNumber = accountNumber;
+            _accountNumber = account.AccountNumber;
             _withdrawalLimit = withdrawalLimit;
             _creditLimit = creditLimit;
-            _ageRestriction = ageRestriction;
         }
 
         #region Properties
@@ -47,5 +47,12 @@ namespace H2_Assigment_My_Banker.Models.Cards
 
         public int AgeRestriction { get { return _ageRestriction; } }
         #endregion
+
+        private string GetNewCardNumber(List<string> prefixes, byte cardLength)
+        {
+            RandomGenerator randomGenerator = new RandomGenerator();
+            return $"{randomGenerator.GetRandomPrefix(prefixes)}{randomGenerator.GenerateNumbers(cardLength)}";
+        }
+
     }
 }

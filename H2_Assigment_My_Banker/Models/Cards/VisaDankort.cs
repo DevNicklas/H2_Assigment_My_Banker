@@ -10,7 +10,8 @@ namespace H2_Assigment_My_Banker.Model.Cards
 {
     internal class VisaDankort : Card
     {
-        public readonly List<string> _prefixes = new List<string>()
+        private const byte LENGTH = 16;
+        private static readonly List<string> _prefixes = new List<string>()
         {
             "4"
         };
