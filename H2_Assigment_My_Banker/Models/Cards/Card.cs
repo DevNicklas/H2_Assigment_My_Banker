@@ -16,7 +16,7 @@ namespace H2_Assigment_My_Banker.Models.Cards
         private string _accountNumber;
         private decimal _withdrawalLimit;
         private decimal _creditLimit;
-        private byte _ageRestriction;
+        private byte _ageRestriction = 0;
 
 
         public Card(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit, List<string> prefixes, byte cardLength)
@@ -30,8 +30,13 @@ namespace H2_Assigment_My_Banker.Models.Cards
             _creditLimit = creditLimit;
         }
 
-        #region Properties
-        public BankAccount Account { get { return _account; } }
+		public Card(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit, byte ageRestriction, List<string> prefixes, byte cardLength) : this(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, prefixes, cardLength)
+		{
+            _ageRestriction = ageRestriction;
+		}
+
+		#region Properties
+		public BankAccount Account { get { return _account; } }
 
         public string CardHolderName { get { return _cardHolderName; } }
 
@@ -45,7 +50,6 @@ namespace H2_Assigment_My_Banker.Models.Cards
 
         public decimal CreditLimit { get { return _creditLimit; } }
 
-        public int AgeRestriction { get { return _ageRestriction; } }
         #endregion
 
         private string GetNewCardNumber(List<string> prefixes, byte cardLength)

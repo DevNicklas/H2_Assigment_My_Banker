@@ -17,7 +17,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
             "4"
         };
 
-        public VisaDankort(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
+        public VisaDankort(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, AGE_RESTRICTION, _prefixes, LENGTH)
         {
 
         }

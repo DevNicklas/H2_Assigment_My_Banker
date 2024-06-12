@@ -17,7 +17,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
             "4026", "417500", "4508", "4844", "4913", "4917"
         };
 
-        public VisaElectron(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
+        public VisaElectron(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, AGE_RESTRICTION, _prefixes, LENGTH)
         {
 
         }

@@ -11,7 +11,6 @@ namespace H2_Assigment_My_Banker.Model.Cards
     internal class Debit : Card
     {
         private const byte LENGTH = 16;
-        private const byte AGE_RESTRICTION = 0;
 
         private static readonly List<string> _prefixes = new List<string>()
         {

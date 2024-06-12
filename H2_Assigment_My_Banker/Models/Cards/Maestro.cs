@@ -19,7 +19,7 @@ namespace H2_Assigment_My_Banker.Model.Cards
 			"6759", "6761", "6762", "6763"
 		};
 
-		public Maestro(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, _prefixes, LENGTH)
+		public Maestro(BankAccount account, string cardHolderName, DateTime expirationDate, decimal withdrawalLimit, decimal creditLimit) : base(account, cardHolderName, expirationDate, withdrawalLimit, creditLimit, AGE_RESTRICTION, _prefixes, LENGTH)
         {
 
 		}
